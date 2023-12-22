@@ -1,0 +1,56 @@
+/* phone */
+
+/* réservez le menu */
+
+.localisation {
+    width: calc(100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-reservez {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+
+.padding-title {
+    padding-left: 15px;
+    font-family: 'Roboto', sans-serif;
+    size: 16px;
+}
+
+.margin-reservez-title {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.margin-reservez-subtitle {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: -2%;
+    margin-bottom: 8%;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+
+    /* réservez le menu */
+
+    .margin-reservez-title {
+        margin-left: 20%;
+        margin-right: 20%;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .margin-reservez-subtitle {
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    }

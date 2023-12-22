@@ -1,0 +1,62 @@
+
+
+.title-menu {
+    font-family: 'Shrikhand', italic;
+    font-weight: 400;
+    font-size: 28px;
+    padding-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+.text-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 65px;
+    margin-left: 10px;
+   
+    
+}
+
+.margin-text-cards {
+    margin-bottom: 5px;
+}
+
+.margin-article {
+    margin-top: 15%;
+}
+
+.text-font-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.text-font-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.prix {
+    position: relative;
+    left: 87%;
+    bottom: 50px;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+
+.title-menu {
+    text-align: center;
+    justify-content: center;
+    padding-top: 5%;
+    margin-bottom: 10%;
+}
+
+.margin-article {
+    margin-top: 7%;
+}
+
+
+}
