@@ -17,8 +17,7 @@
 }
 
 .button-hover:hover {
-    background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
-
+    opacity: 1;
 }
 
 /* fonctionnement */
@@ -36,6 +35,15 @@
 .background-restaurants {
     background-color: #F3F3F3;
     padding-bottom: 20%;
+}
+
+.heart-hover {
+    color: transparent;
+}
+
+.heart-hover:hover {
+  transform-origin: 50% bottom;
+  color: linear-gradient(#FF79DA, #9356DC);
 }
 
 /* footer */
