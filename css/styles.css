@@ -16,7 +16,8 @@
 }
 
 .button-hover:hover {
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-color: #353535;
+  opacity: 0.5;
 }
 
 /* fonctionnement */
@@ -32,6 +33,15 @@
 .background-restaurants {
   background-color: #F3F3F3;
   padding-bottom: 20%;
+}
+
+.heart-hover {
+  color: transparent;
+}
+
+.heart-hover:hover {
+  transform-origin: 50% bottom;
+  color: linear-gradient(#FF79DA, #9356DC);
 }
 
 /* footer */
@@ -142,11 +152,6 @@
   padding-left: 14%;
 }
 
-.heart-position:hover {
-  color: linear-gradient(#FF79DA, #9356DC);
-  transform-origin: 50% bottom;
-}
-
 /* desktop */
 @media (min-width: 768px) {
   /* header */
@@ -189,6 +194,9 @@
   font-size: 16px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+.style-button-commander:hover {
+  transform: scale(2);
 }
 
 .position-btn-commander {
@@ -515,6 +523,25 @@ body {
   list-style: none;
   padding-left: 0;
   padding: 0;
+}
+
+.loader {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress_bar {
+  background-color: aqua;
+  border-radius: 10px;
+  width: 400px;
+  height: 20px;
 }
 
 @media (min-width: 768px) {
