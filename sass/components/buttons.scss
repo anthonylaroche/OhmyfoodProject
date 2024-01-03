@@ -28,10 +28,13 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, .25);
     cursor: pointer;
 
+    &:hover {
+        transform: scale(2);
+    }
 }
 
-.style-button-commander:hover {
-    transform: scale(1.15);
+.btn-commander:hover {
+    transform: scale(2);
 }
 
 
