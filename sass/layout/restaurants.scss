@@ -72,6 +72,20 @@
     margin-bottom: 0;
 }
 
+.background-restaurants {
+    background-color: $white-grey;
+    padding-bottom: 20%;
+}
+
+.heart-hover {
+    color: transparent;
+}
+
+.heart-hover:hover {
+    transform-origin: 50% bottom;
+    color: linear-gradient( $pink, $violet);
+}
+
 /* desktop */
 @media (min-width: 768px) {
 
@@ -100,6 +114,10 @@
     .encadre-nouveau {
         left: 80%;
         top: -100%;
+    }
+
+    .background-restaurants {
+        padding-bottom: 0;
     }
 
 }

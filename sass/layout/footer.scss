@@ -17,6 +17,18 @@
     padding-bottom: 2%;
 }
 
+.background-footer {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $black;
+}
+
+.color-text-footer {
+    color: white;
+    margin-left: 4%;
+}
+
 .margin-footer {
     margin-bottom: 4%;
 }
@@ -33,7 +45,36 @@
 /* desktop */
 @media (min-width: 768px) {
 
-   
+    background-footer {
+        padding-top: 40px;
+
+    }
+
+    .background-menu {
+        width: 60%;
+        margin-left: 22%;
+    }
     
+    .display-footer {
+        width: 50%;
+        flex-direction: row;
+        margin-bottom: -10px;
+        padding-left: 30%;
+    }
+
+
+    .logo-footer {
+        display: block;
+        margin-left: 0;
+        padding-bottom: 0;
+        padding-left: 88%;
+        margin-bottom: -40px;
+
+    }
+
+    .text-align {
+        white-space: nowrap;
+    }
+
 
 }

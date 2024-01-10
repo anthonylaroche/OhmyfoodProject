@@ -23,6 +23,17 @@
     top: 20px;
 }
 
+.background-title {
+    background-color: $background-title;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.button-hover:hover {
+    opacity: 0.9;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.705);
+}
+
 /* menu la palette du goût */
 
 .image-palette {
