@@ -11,14 +11,14 @@
 
 /* fonctionnements */
 .circle {
-    background: #9356dc;
+    background: $violet;
     height: 24px;
     width: 24px;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: white;
     position: absolute;
 }
 
@@ -35,10 +35,16 @@
 
 /* restaurants */
 
-.icon-position {
+.heart-position {
     position: relative;
     left: 85%;
     bottom: 30px;
+}
+
+.heart-position-two {
+    position: relative;
+    left: 85%;
+    bottom: 46px;
 }
 
 /* footer */

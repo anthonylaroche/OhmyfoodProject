@@ -2,16 +2,18 @@
 
 .background-menu {
     width: 100%;
+    flex-direction: column;
+    margin-left: 0;
     background-color: $white-grey;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     position: relative;
-    margin-top: -40px;
+    margin-top: -60px;
     padding-bottom: 20px;
 }
 
 .border-text-menu {
-    border-bottom: 3px solid #99E2D0;
+    border-bottom: 3px solid $light-green;
 }
 
 .card-menu {
@@ -23,7 +25,7 @@
     border-radius: 15px;
     background-color: white;
     margin-top: 15px;
-    
+
 
 }
 
@@ -40,6 +42,29 @@
 
 
 .card-margin {
+    justify-content: space-between;
+    align-items: center;
     margin-left: 4%;
     margin-right: 4%;
+    
+   
+}
+
+
+/* desktop */
+@media (min-width: 768px) {
+    .card-margin {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+
+    .background-menu {
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
 }

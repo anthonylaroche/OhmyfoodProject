@@ -1,6 +1,5 @@
 /**loader 3s**/
 
-
 .loader {
     width: 100%;
     height: 0%;
@@ -28,9 +27,9 @@
 
 @keyframes rotation {
     0% {
-        border: 10px solid #f3f3f3;
+        border: 10px solid $white-grey;
         border-top: 10px solid red;
-        border-bottom: 10px solid #9356DC;
+        border-bottom: 10px solid $violet;
         transform: rotate(0deg);
     }
 
@@ -41,7 +40,7 @@
 
 @keyframes page {
     0% {
-        height: 200%;
+        height: 277%;
         background-color: white
     }
 
@@ -51,7 +50,7 @@
 
     100% {
         background-color: transparent;
-        height: 200%
+        height: 277%
     }
 
 
@@ -192,4 +191,181 @@
         height: 1119px;
         transform: scaleY(0);
     }
+}
+
+
+/* desktop */
+@media (min-width: 768px) {
+
+    /**loader 3s**/
+
+    .loader {
+        width: 100%;
+        height: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: transparent;
+        background-size: cover;
+        animation-name: page;
+        animation-duration: 3s;
+    }
+
+    .progress_bar {
+        border: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-top: 0;
+        animation: rotation 1s linear 3;
+
+    }
+
+    @keyframes rotation {
+        0% {
+            border: 10px solid #f3f3f3;
+            border-top: 10px solid red;
+            border-bottom: 10px solid #9356DC;
+            margin-bottom: 20%;
+            transform: rotate(0deg);
+        }
+
+        100% {
+            margin-bottom: 20%;
+            transform: rotate(360deg)
+        }
+    }
+
+    @keyframes page {
+        0% {
+            height: 127%;
+            background-color: white
+        }
+
+        99% {
+            background-color: white;
+        }
+
+        100% {
+            background-color: transparent;
+            height: 127%
+        }
+
+
+    }
+
+
+
+
+    /**menu validation**/
+
+    .validation {
+        left: 94%;
+    }
+
+    @keyframes translate {
+        from {
+            left: 94%;
+            bottom: 69px;
+            width: 59px;
+            height: 69px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color: #99E2D0;
+        }
+
+        50% {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        90% {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        to {
+            left: 0%;
+            bottom: 69px;
+            width: 59px;
+            height: 69px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            background-color: #99E2D0;
+        }
+
+    }
+
+    /**menu**/
+
+    @keyframes chargement {
+        0% {
+            height: 88%;
+            background-color: white;
+            transform: scaleY(1);
+        }
+
+        5% {
+            transform: scaleY(1);
+        }
+
+        10% {
+            transform: scaleY(0.9);
+        }
+
+        20% {
+
+            transform: scaleY(0.8);
+        }
+
+        30% {
+            transform: scaleY(0.7);
+        }
+
+        40% {
+            transform: scaleY(0.6);
+        }
+
+        50% {
+
+            transform: scaleY(0.5);
+        }
+
+        60% {
+            transform: scaleY(0.4);
+        }
+
+        70% {
+            transform: scaleY(0.3);
+        }
+
+        80% {
+            transform: scaleY(0.2);
+        }
+
+        90% {
+            background-color: white;
+            transform: scaleY(0.1);
+        }
+
+        100% {
+            background-color: transparent;
+            height: 88%;
+            transform: scaleY(0);
+        }
+    }
+
+
+
+
+
 }

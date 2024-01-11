@@ -1,17 +1,881 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 4 | @import 'abstracts/variables.scss';
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\style.scss 4:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 4 \2502  @import 'abstracts/variables.scss';\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\style.scss 4:9  root stylesheet";
+@charset "UTF-8";
+/* general */
+/**loader 3s**/
+.loader {
+  width: 100%;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: transparent;
+  background-size: cover;
+  animation-name: page;
+  animation-duration: 3s;
 }
+
+.progress_bar {
+  border: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 150%;
+  animation: rotation 1s linear 3;
+}
+
+@keyframes rotation {
+  0% {
+    border: 10px solid #F3F3F3;
+    border-top: 10px solid red;
+    border-bottom: 10px solid #9356DC;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes page {
+  0% {
+    height: 277%;
+    background-color: white;
+  }
+  99% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+    height: 277%;
+  }
+}
+/**menu validation**/
+.validation {
+  display: flex;
+  position: relative;
+  left: 83%;
+  bottom: 69px;
+  width: 59px;
+  height: 69px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  animation-fill-mode: both;
+  background-color: #99E2D0;
+  margin: 0;
+  padding: 0;
+}
+
+.validation:hover {
+  animation-name: translate;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+@keyframes translate {
+  from {
+    left: 83%;
+    bottom: 69px;
+    width: 59px;
+    height: 69px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #99E2D0;
+  }
+  50% {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  90% {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  to {
+    left: 0%;
+    bottom: 69px;
+    width: 59px;
+    height: 69px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #99E2D0;
+  }
+}
+/**menu**/
+.chargement-pages {
+  width: 100%;
+  height: 0px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute !important;
+  border-radius: 0px;
+  left: 0;
+  background-color: transparent;
+  animation-name: chargement;
+  animation-duration: 25s;
+  transform-origin: 100% 100%;
+}
+
+@keyframes chargement {
+  0% {
+    height: 1119px;
+    background-color: white;
+    transform: scaleY(1);
+  }
+  5% {
+    transform: scaleY(1);
+  }
+  10% {
+    transform: scaleY(0.9);
+  }
+  20% {
+    transform: scaleY(0.8);
+  }
+  30% {
+    transform: scaleY(0.7);
+  }
+  40% {
+    transform: scaleY(0.6);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+  60% {
+    transform: scaleY(0.4);
+  }
+  70% {
+    transform: scaleY(0.3);
+  }
+  80% {
+    transform: scaleY(0.2);
+  }
+  90% {
+    background-color: white;
+    transform: scaleY(0.1);
+  }
+  100% {
+    background-color: transparent;
+    height: 1119px;
+    transform: scaleY(0);
+  }
+}
+/* desktop */
+@media (min-width: 768px) {
+  /**loader 3s**/
+  .loader {
+    width: 100%;
+    height: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: transparent;
+    background-size: cover;
+    animation-name: page;
+    animation-duration: 3s;
+  }
+  .progress_bar {
+    border: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: 0;
+    animation: rotation 1s linear 3;
+  }
+  @keyframes rotation {
+    0% {
+      border: 10px solid #f3f3f3;
+      border-top: 10px solid red;
+      border-bottom: 10px solid #9356DC;
+      margin-bottom: 20%;
+      transform: rotate(0deg);
+    }
+    100% {
+      margin-bottom: 20%;
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes page {
+    0% {
+      height: 127%;
+      background-color: white;
+    }
+    99% {
+      background-color: white;
+    }
+    100% {
+      background-color: transparent;
+      height: 127%;
+    }
+  }
+  /**menu validation**/
+  .validation {
+    left: 94%;
+  }
+  @keyframes translate {
+    from {
+      left: 94%;
+      bottom: 69px;
+      width: 59px;
+      height: 69px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-color: #99E2D0;
+    }
+    50% {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+    90% {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+    to {
+      left: 0%;
+      bottom: 69px;
+      width: 59px;
+      height: 69px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      background-color: #99E2D0;
+    }
+  }
+  /**menu**/
+  @keyframes chargement {
+    0% {
+      height: 88%;
+      background-color: white;
+      transform: scaleY(1);
+    }
+    5% {
+      transform: scaleY(1);
+    }
+    10% {
+      transform: scaleY(0.9);
+    }
+    20% {
+      transform: scaleY(0.8);
+    }
+    30% {
+      transform: scaleY(0.7);
+    }
+    40% {
+      transform: scaleY(0.6);
+    }
+    50% {
+      transform: scaleY(0.5);
+    }
+    60% {
+      transform: scaleY(0.4);
+    }
+    70% {
+      transform: scaleY(0.3);
+    }
+    80% {
+      transform: scaleY(0.2);
+    }
+    90% {
+      background-color: white;
+      transform: scaleY(0.1);
+    }
+    100% {
+      background-color: transparent;
+      height: 88%;
+      transform: scaleY(0);
+    }
+  }
+}
+/* phones */
+/* header */
+.direction-arrow {
+  position: relative;
+  bottom: 35px;
+  left: 6%;
+}
+
+/* fonctionnements */
+.circle {
+  background: #9356DC;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+}
+
+.margin-icon {
+  margin-left: -95%;
+  margin-right: 20px;
+  margin-top: -0.5%;
+}
+
+.margin-icon-two {
+  margin-left: -20%;
+  margin-right: 20px;
+}
+
+/* restaurants */
+.heart-position {
+  position: relative;
+  left: 85%;
+  bottom: 30px;
+}
+
+.heart-position-two {
+  position: relative;
+  left: 85%;
+  bottom: 46px;
+}
+
+/* footer */
+.margin-logo-footer {
+  margin-right: 3%;
+}
+
+/* menu la palette du goût */
+.heart-position {
+  padding-left: 14%;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  /* header */
+  .direction-arrow {
+    bottom: 40px;
+    left: 3%;
+  }
+  /* restaurants */
+  .icon-position {
+    left: 90%;
+  }
+  /* menu la palette du goût */
+  .heart-position {
+    padding-left: 5%;
+  }
+}
+/* phones */
+/* réservez le menu */
+.style-button-explorer {
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border-width: 0;
+  width: 218px;
+  height: 50px;
+  font-size: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.style-button-commander {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border-width: 0;
+  width: 186px;
+  height: 50px;
+  font-size: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.style-button-commander:hover {
+  transform: scale(1.15);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.705);
+}
+
+.position-btn-commander {
+  text-align: center;
+  justify-content: center;
+}
+
+/* phones */
+/* home */
+.direction-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo-size {
+  width: 43%;
+  padding-top: 5%;
+  margin-bottom: 3%;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.arrow-direction {
+  display: none;
+  color: black;
+  position: relative;
+  right: 60%;
+  top: 20px;
+}
+
+.background-title {
+  background-color: #EAEAEA;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button-hover:hover {
+  opacity: 0.9;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.705);
+}
+
+/* menu la palette du goût */
+.image-palette {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .logo-size {
+    width: 200px;
+    height: 34.2px;
+    padding-top: 2%;
+    margin-bottom: 1%;
+  }
+}
+/* phone */
+/* réservez le menu */
+.localisation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.background-reservez {
+  background-color: #F3F3F3;
+  padding-top: 1px;
+  padding-bottom: 40px;
+}
+
+.title-reservez {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+
+.padding-title {
+  padding-left: 15px;
+  font-family: "Roboto", sans-serif;
+  size: 16px;
+}
+
+.margin-reservez-title {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.margin-reservez-subtitle {
+  margin-left: 6%;
+  margin-right: 6%;
+  margin-top: -2%;
+  margin-bottom: 8%;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  /* réservez le menu */
+  .margin-reservez-title {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .margin-reservez-subtitle {
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+/* phones */
+/** Fonctionnement **/
+.margin-text-fonctionnement {
+  margin-left: 10%;
+}
+
+.margin-fonctionnement {
+  margin-left: 8%;
+  margin-right: 5%;
+}
+
+.color-icon-fonctionnement {
+  color: #7E7E7E;
+}
+
+.color-icon-fonctionnement-hover:hover {
+  color: #9356DC;
+}
+
+.border-fonctionnement {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #F3F3F3;
+  filter: drop-shadow(0px 3px 2px grey);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 4%;
+}
+
+.text-border-fonctionnement {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .margin-text-fonctionnement {
+    margin-left: 11%;
+  }
+  .margin-fonctionnement {
+    margin-left: 11%;
+    margin-right: 11%;
+  }
+  .border-fonctionnement {
+    width: 31%;
+    margin-right: 0;
+  }
+}
+/* phones */
+/*** restaurants ***/
+.row-direction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.margin-restaurants {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.padding-title-restaurants {
+  padding-top: 15%;
+  padding-bottom: 4%;
+  padding-left: 9%;
+}
+
+.card {
+  width: 100%;
+  height: 251px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.encadre-nouveau {
+  border: solid transparent;
+  border-radius: 2px;
+  width: 80px;
+  height: 20px;
+  margin: 0;
+  background-color: #99E2D0;
+  color: #008766;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 5px;
+  position: relative;
+  left: 72%;
+  top: -95%;
+}
+
+.card-text {
+  width: 100%;
+  padding-left: 15px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-title-restaurants {
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+.texte-subtitle-restaurants {
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+.background-restaurants {
+  background-color: #F3F3F3;
+  padding-bottom: 20%;
+}
+
+.heart-color {
+  color: transparent;
+}
+
+.heart-color:hover {
+  color: #9356DC;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  /* restaurants */
+  .row-direction {
+    flex-direction: row;
+  }
+  .margin-restaurants {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .padding-title-restaurants {
+    padding-top: 4%;
+    padding-bottom: 2%;
+    padding-left: 11%;
+  }
+  .card {
+    width: 40%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .encadre-nouveau {
+    left: 80%;
+  }
+  .background-restaurants {
+    padding-bottom: 0;
+  }
+}
+/* phones */
+/**** footer ****/
+.display-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-footer {
+  color: white;
+  font-family: "Shrikhand";
+  font-size: 19.2px;
+  margin-left: 6%;
+  padding-bottom: 2%;
+}
+
+.background-footer {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #353535;
+}
+
+.color-text-footer {
+  color: white;
+  margin-left: 4%;
+}
+
+.margin-footer {
+  margin-bottom: 4%;
+}
+
+.border-footer {
+  border-bottom: 2px solid transparent;
+}
+
+.footer-hover:hover {
+  border-bottom-color: white;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  background-footer {
+    padding-top: 40px;
+  }
+  .background-menu {
+    width: 60%;
+    margin-left: 22%;
+  }
+  .display-footer {
+    width: 50%;
+    flex-direction: row;
+    margin-bottom: -20px;
+    margin-left: 40%;
+    justify-content: initial;
+  }
+  .logo-footer {
+    display: block;
+    margin-left: 0;
+    padding-bottom: 0;
+    padding-left: 88%;
+    margin-bottom: -40px;
+  }
+  .text-align {
+    white-space: nowrap;
+    padding-right: 15px;
+  }
+  .padding-text-footer {
+    padding-right: 65px;
+  }
+}
+.title-menu {
+  font-family: "Shrikhand", italic;
+  font-weight: 400;
+  font-size: 28px;
+  padding-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.text-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 65px;
+  margin-left: 10px;
+}
+
+.margin-text-cards {
+  margin-bottom: 5px;
+}
+
+.margin-article {
+  margin-top: 15%;
+}
+
+.text-font-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.text-font-subtitle {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.prix {
+  position: relative;
+  left: 87%;
+  bottom: 50px;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .title-menu {
+    text-align: center;
+    justify-content: center;
+    padding-top: 5%;
+    margin-bottom: 5%;
+  }
+  .margin-article {
+    margin-top: 7%;
+  }
+}
+/* menu */
+.background-menu {
+  width: 100%;
+  flex-direction: column;
+  margin-left: 0;
+  background-color: #F3F3F3;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  margin-top: -60px;
+  padding-bottom: 20px;
+}
+
+.border-text-menu {
+  border-bottom: 3px solid #99E2D0;
+}
+
+.card-menu {
+  width: 100%;
+  height: 69px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.color-check {
+  color: black;
+  padding-top: 25px;
+  padding-left: 20px;
+}
+
+.color-check:hover {
+  color: black;
+  animation-delay: 1s;
+}
+
+.card-margin {
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .card-margin {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .background-menu {
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.list-style {
+  list-style: none;
+  padding-left: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */

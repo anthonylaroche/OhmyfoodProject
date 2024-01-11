@@ -42,14 +42,14 @@
     width: 80px;
     height: 20px;
     margin: 0;
-    background-color: #99E2D0;
-    color: #008766;
+    background-color: $light-green;
+    color: $green;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
     padding-top: 5px;
     position: relative;
-    left: 70%;
+    left: 72%;
     top: -95%;
 }
 
@@ -77,13 +77,12 @@
     padding-bottom: 20%;
 }
 
-.heart-hover {
+.heart-color {
     color: transparent;
 }
 
-.heart-hover:hover {
-    transform-origin: 50% bottom;
-    color: linear-gradient( $pink, $violet);
+.heart-color:hover {
+    color: $violet;
 }
 
 /* desktop */
@@ -96,24 +95,25 @@
     }
 
     .margin-restaurants {
-        margin-left: 6%;
-        margin-right: 6%;
+        margin-left: 8%;
+        margin-right: 8%;
     }
 
     .padding-title-restaurants {
         padding-top: 4%;
         padding-bottom: 2%;
-        padding-left: 9%;
+        padding-left: 11%;
     }
 
     .card {
+        width: 40%;
         margin-left: 3%;
         margin-right: 3%;
     }
 
     .encadre-nouveau {
         left: 80%;
-        top: -100%;
+
     }
 
     .background-restaurants {
