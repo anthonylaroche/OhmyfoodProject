@@ -37,13 +37,13 @@
 
 .heart-position {
     position: relative;
-    left: 85%;
+    left: 70%;
     bottom: 30px;
 }
 
 .heart-position-two {
     position: relative;
-    left: 85%;
+    left: 84%;
     bottom: 46px;
 }
 
@@ -54,10 +54,16 @@
 }
 
 
-/* menu la palette du goût */
+/* menu */
 
-.heart-position {
+.heart-menu-position {
     padding-left: 14%;
+}
+
+.heart-menu-position-two {
+    position: relative;
+    left: 86.8%;
+    bottom: 41px;
 }
 
 
@@ -74,8 +80,8 @@
 
     /* restaurants */
 
-    .icon-position {
-        left: 90%;
+    .heart-position {
+        left: 79%;
     }
 
     /* menu la palette du goût */

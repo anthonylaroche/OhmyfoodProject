@@ -11,6 +11,7 @@
   background-size: cover;
   animation-name: page;
   animation-duration: 3s;
+  z-index: 900;
 }
 
 .progress_bar {
@@ -52,28 +53,18 @@
 .validation {
   display: flex;
   position: relative;
-  left: 83%;
-  bottom: 69px;
+  justify-content: center;
+  left: 100%;
   width: 59px;
   height: 69px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  animation-fill-mode: both;
-  background-color: #99E2D0;
-  margin: 0;
-  padding: 0;
-}
-
-.validation:hover {
-  animation-name: translate;
-  animation-duration: 2s;
-  animation-delay: 1s;
+  background-color: transparent;
 }
 
 @keyframes translate {
   from {
-    left: 83%;
-    bottom: 69px;
+    left: 18%;
     width: 59px;
     height: 69px;
     border-top-right-radius: 15px;
@@ -93,8 +84,7 @@
     border-bottom-left-radius: 0px;
   }
   to {
-    left: 0%;
-    bottom: 69px;
+    left: -66%;
     width: 59px;
     height: 69px;
     border-top-right-radius: 0px;
@@ -104,10 +94,36 @@
     background-color: #99E2D0;
   }
 }
+.card-menu:hover .prix {
+  transform: translateX(-90px);
+  animation-fill-mode: both;
+}
+.card-menu:hover .validation {
+  transform: translateX(-100%);
+  animation-name: translate;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+.card-menu:hover .text-menu {
+  animation-name: text-menu;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  animation-duration: 1s;
+}
+
+@keyframes text-menu {
+  from {
+    margin-left: 10px;
+  }
+  to {
+    margin-left: 70px;
+  }
+}
 /**menu**/
 .chargement-pages {
   width: 100%;
-  height: 0px;
+  height: 0%;
   display: flex;
   justify-content: space-between;
   position: absolute !important;
@@ -115,50 +131,23 @@
   left: 0;
   background-color: transparent;
   animation-name: chargement;
-  animation-duration: 25s;
+  animation-duration: 5s;
   transform-origin: 100% 100%;
+  z-index: 900;
 }
 
 @keyframes chargement {
   0% {
-    height: 1119px;
-    background-color: white;
+    height: 90%;
+    background-color: #F3F3F3;
     transform: scaleY(1);
   }
-  5% {
-    transform: scaleY(1);
-  }
-  10% {
-    transform: scaleY(0.9);
-  }
-  20% {
-    transform: scaleY(0.8);
-  }
-  30% {
-    transform: scaleY(0.7);
-  }
-  40% {
-    transform: scaleY(0.6);
-  }
-  50% {
-    transform: scaleY(0.5);
-  }
-  60% {
-    transform: scaleY(0.4);
-  }
-  70% {
-    transform: scaleY(0.3);
-  }
-  80% {
-    transform: scaleY(0.2);
-  }
-  90% {
-    background-color: white;
-    transform: scaleY(0.1);
+  99% {
+    background-color: #F3F3F3;
   }
   100% {
     background-color: transparent;
-    height: 1119px;
+    height: 90%;
     transform: scaleY(0);
   }
 }
@@ -331,13 +320,13 @@
 /* restaurants */
 .heart-position {
   position: relative;
-  left: 85%;
+  left: 70%;
   bottom: 30px;
 }
 
 .heart-position-two {
   position: relative;
-  left: 85%;
+  left: 84%;
   bottom: 46px;
 }
 
@@ -346,9 +335,15 @@
   margin-right: 3%;
 }
 
-/* menu la palette du goût */
-.heart-position {
+/* menu */
+.heart-menu-position {
   padding-left: 14%;
+}
+
+.heart-menu-position-two {
+  position: relative;
+  left: 86.8%;
+  bottom: 41px;
 }
 
 /* desktop */
@@ -359,8 +354,8 @@
     left: 3%;
   }
   /* restaurants */
-  .icon-position {
-    left: 90%;
+  .heart-position {
+    left: 79%;
   }
   /* menu la palette du goût */
   .heart-position {
@@ -759,8 +754,7 @@
 .text-menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 65px;
+  margin-top: 10px;
   margin-left: 10px;
 }
 
@@ -775,17 +769,28 @@
 .text-font-title {
   font-size: 18px;
   font-weight: 500;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid white;
 }
 
 .text-font-subtitle {
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid white;
 }
 
 .prix {
   position: relative;
-  left: 87%;
+  left: 160%;
   bottom: 50px;
+  transition: translate 1s;
 }
 
 /* desktop */
@@ -803,7 +808,6 @@
 /* menu */
 .background-menu {
   width: 100%;
-  flex-direction: column;
   margin-left: 0;
   background-color: #F3F3F3;
   border-top-left-radius: 20px;
@@ -818,11 +822,10 @@
 }
 
 .card-menu {
-  width: 100%;
+  width: 349px;
   height: 69px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 15px;
   background-color: white;
   margin-top: 15px;
@@ -831,7 +834,6 @@
 .color-check {
   color: black;
   padding-top: 25px;
-  padding-left: 20px;
 }
 
 .color-check:hover {

@@ -10,6 +10,7 @@
     background-size: cover;
     animation-name: page;
     animation-duration: 3s;
+    z-index: 900;
 }
 
 .progress_bar {
@@ -62,29 +63,20 @@
 .validation {
     display: flex;
     position: relative;
-    left: 83%;
-    bottom: 69px;
+    justify-content: center;
+    left: 100%;
     width: 59px;
     height: 69px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    animation-fill-mode: both;
-    background-color: #99E2D0;
-    margin: 0;
-    padding: 0;
-}
-
-.validation:hover {
-    animation-name: translate;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    background-color: transparent;
+    
 }
 
 
 @keyframes translate {
     from {
-        left: 83%;
-        bottom: 69px;
+        left: 18%;
         width: 59px;
         height: 69px;
         border-top-right-radius: 15px;
@@ -104,11 +96,11 @@
         border-bottom-right-radius: 0px;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
+
     }
 
     to {
-        left: 0%;
-        bottom: 69px;
+        left: -66%;
         width: 59px;
         height: 69px;
         border-top-right-radius: 0px;
@@ -118,12 +110,46 @@
         background-color: #99E2D0;
     }
 
+} 
+
+.card-menu:hover {
+    .prix {
+        transform: translateX(-90px);
+        animation-fill-mode: both;
+    }
+
+    .validation {
+        transform: translateX(-100%);
+        animation-name: translate;
+        animation-fill-mode: both;
+        animation-duration: 1s;
+        animation-delay: 2s;
+    }
+
+    .text-menu {
+        animation-name: text-menu;
+        animation-fill-mode: both;
+        animation-delay: 2s;
+        animation-duration: 1s;
+    }
 }
+
+
+@keyframes text-menu {
+    from {
+        margin-left: 10px;
+    }
+
+    to {
+        margin-left: 70px;
+    }
+}
+
 
 /**menu**/
 .chargement-pages {
     width: 100%;
-    height: 0px;
+    height: 0%;
     display: flex;
     justify-content: space-between;
     position: absolute !important;
@@ -131,64 +157,26 @@
     left: 0;
     background-color: transparent;
     animation-name: chargement;
-    animation-duration: 25s;
+    animation-duration: 5s;
     transform-origin: 100% 100%;
+    z-index: 900;
 
 }
 
 @keyframes chargement {
     0% {
-        height: 1119px;
-        background-color: white;
+        height: 90%;
+        background-color: $white-grey;
         transform: scaleY(1);
     }
 
-    5% {
-        transform: scaleY(1);
-    }
-
-    10% {
-        transform: scaleY(0.9);
-    }
-
-    20% {
-
-        transform: scaleY(0.8);
-    }
-
-    30% {
-        transform: scaleY(0.7);
-    }
-
-    40% {
-        transform: scaleY(0.6);
-    }
-
-    50% {
-
-        transform: scaleY(0.5);
-    }
-
-    60% {
-        transform: scaleY(0.4);
-    }
-
-    70% {
-        transform: scaleY(0.3);
-    }
-
-    80% {
-        transform: scaleY(0.2);
-    }
-
-    90% {
-        background-color: white;
-        transform: scaleY(0.1);
+    99% {
+        background-color: $white-grey;
     }
 
     100% {
         background-color: transparent;
-        height: 1119px;
+        height: 90%;
         transform: scaleY(0);
     }
 }

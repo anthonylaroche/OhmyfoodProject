@@ -2,7 +2,6 @@
 
 .background-menu {
     width: 100%;
-    flex-direction: column;
     margin-left: 0;
     background-color: $white-grey;
     border-top-left-radius: 20px;
@@ -17,11 +16,10 @@
 }
 
 .card-menu {
-    width: 100%;
+    width: 349px;
     height: 69px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+   justify-content: space-between;
     border-radius: 15px;
     background-color: white;
     margin-top: 15px;
@@ -29,10 +27,11 @@
 
 }
 
+
 .color-check {
     color: black;
     padding-top: 25px;
-    padding-left: 20px;
+    
 }
 
 .color-check:hover {

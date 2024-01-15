@@ -13,11 +13,8 @@
 .text-menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 65px;
+    margin-top: 10px;
     margin-left: 10px;
-   
-    
 }
 
 .margin-text-cards {
@@ -31,18 +28,31 @@
 .text-font-title {
     font-size: 18px;
     font-weight: 500;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid white;
 }
 
 .text-font-subtitle {
     font-size: 15px;
     font-weight: 300;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid white;
 }
 
 .prix {
     position: relative;
-    left: 87%;
+    left: 160%;
     bottom: 50px;
+    transition: translate 1s;
 }
+
+
 
 /* desktop */
 @media (min-width: 768px) {
