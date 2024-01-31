@@ -36,16 +36,28 @@
 /* restaurants */
 
 .heart-position {
+    max-width: 20px;
     position: relative;
-    left: 70%;
+    left: 84%;
     bottom: 30px;
 }
 
 .heart-position-two {
+    max-width: 20px;
     position: relative;
     left: 84%;
     bottom: 46px;
+
+    &:hover {
+        color: $violet;
+    }
 }
+
+.heart-color {
+    color: transparent;
+}
+
+
 
 /* footer */
 
@@ -57,13 +69,17 @@
 /* menu */
 
 .heart-menu-position {
-    padding-left: 14%;
+    padding-left: 10%;
 }
 
 .heart-menu-position-two {
     position: relative;
     left: 86.8%;
     bottom: 41px;
+
+    &:hover {
+        color: $violet;
+    }
 }
 
 
@@ -73,10 +89,55 @@
 
     /* header */
 
-.direction-arrow {
-    bottom: 40px;
-    left: 3%;
+    .direction-arrow {
+        bottom: 30px;
+        left: 7%;
+    }
+
+    /*fonctionnement*/
+
+    .margin-icon {
+        margin-left: -108%;
+
+    }
+
+    /* restaurants */
+
+    .heart-position {
+        left: 86%;
+    }
+
+    .heart-position-two {
+        left: 91%;
+    }
+
+    /* menu */
+
+    .heart-position {
+        padding-left: 5%;
+    }
+
+    .heart-menu-position-two {
+        left: -4%;
+        bottom: 0px;
+    }
+
 }
+
+@media (min-width: 1024px) {
+
+    /* header */
+
+    .direction-arrow {
+        bottom: 30px;
+        left: 15%;
+    }
+
+    /*fonctionnement*/
+
+    .margin-icon {
+        margin-left: -94%;
+    }
 
     /* restaurants */
 
@@ -84,10 +145,13 @@
         left: 79%;
     }
 
-    /* menu la palette du goût */
+    /* menu */
 
-.heart-position {
-    padding-left: 5%;
-}
+    .heart-position {
+        padding-left: 5%;
+    }
 
+    .heart-menu-position-two {
+        left: -3.7%;
+    }
 }

@@ -43,6 +43,25 @@
 /* desktop */
 @media (min-width: 768px) {
 
+    .border-fonctionnement {
+        width: 80%;
+    }
+
+    .text-border-fonctionnement {
+        flex-direction: row;
+        padding-left: 10%;
+    }
+
+    
+}
+
+@media (min-width: 1024px) {
+    
+    .text-border-fonctionnement {
+        font-size: 13px;
+        padding-left: 0;
+    }
+
     .margin-text-fonctionnement {
         margin-left: 11%;
     }

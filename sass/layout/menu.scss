@@ -6,6 +6,8 @@
     background-color: $white-grey;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     margin-top: -60px;
     padding-bottom: 20px;
@@ -19,51 +21,153 @@
     width: 349px;
     height: 69px;
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
     border-radius: 15px;
     background-color: white;
     margin-top: 15px;
+    overflow: hidden;
 
 
 }
 
 
 .color-check {
-    color: black;
+    color: transparent;
     padding-top: 25px;
-    
-}
 
-.color-check:hover {
-    color: black;
-    animation-delay: 1s;
 }
-
 
 .card-margin {
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-left: 4%;
     margin-right: 4%;
-    
-   
+
+
 }
+
+.position-title {
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.title-menu {
+    width: 100%;
+    font-family: 'Shrikhand', italic;
+    font-weight: 400;
+    font-size: 28px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.text-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.margin-text-cards {
+    margin-bottom: 5px;
+}
+
+.margin-article {
+    margin-top: 15%;
+}
+
+.text-font-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*
+white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid white; */
+
+.text-font-subtitle {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.prix {
+    width: 30px;
+    display: flex;
+    position: relative;
+    left: 300px;
+    bottom: 50px;
+}
+
+/*
+ position: relative;
+    left: 300px;
+    bottom: 50px;
+    transition: translate 1s;*/
+
 
 
 /* desktop */
 @media (min-width: 768px) {
-    .card-margin {
-        margin-left: 20%;
-        margin-right: 20%;
+
+    .card-menu {
+        width: 614px;
     }
-    
+
+    .card-margin {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
+    .title-menu {
+        margin-left: 40px;
+        padding-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .margin-article {
+        margin-top: 7%;
+    }
+
+    .prix {
+        left: 570px;
+    }
+
+
+
+}
+
+@media (min-width: 1024px) {
+
+    .card-menu {
+        width: 634px;
+    }
 
     .background-menu {
-        flex-direction: column;
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
     }
+
+    .title-menu {
+        text-align: center;
+        justify-content: center;
+        padding-top: 5%;
+        margin-bottom: 5%;
+    }
+
 
 
 }

@@ -8,6 +8,7 @@
     justify-content: center;
 }
 
+
 .logo-size {
     width: 43%;
     padding-top: 5%;
@@ -29,12 +30,15 @@
     padding-bottom: 20px;
 }
 
-.button-hover:hover {
-    opacity: 0.9;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.705);
+
+/* menu */
+
+.direction-header-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-/* menu la palette du goût */
 
 .image-palette {
     width: 100%;
@@ -43,16 +47,33 @@
 }
 
 
-/* desktop */
+/* tablette */
 @media (min-width: 768px) {
 
-    .logo-size {
-        width: 200px;
-        height: 34.2px;
-        padding-top: 2%;
-        margin-bottom: 1%;
-        
+    .image-palette {
+        width: 100%;
     }
 
 
+}
+
+/* desktop */
+
+.logo-size {
+    width: 200px;
+    height: 34.2px;
+    padding-top: 2%;
+    margin-bottom: 1%;
+    
+}
+
+@media (min-width: 1024px) {
+    .image-palette {
+        width: 100%;
+    }
+
+    .direction-header-menu {
+        margin-left: 0px;
+
+    }
 }

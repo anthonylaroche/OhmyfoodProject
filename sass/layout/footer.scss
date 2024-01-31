@@ -42,12 +42,23 @@
 }
 
 
-/* desktop */
+/* tablette */
 @media (min-width: 768px) {
 
-    background-footer {
-        padding-top: 40px;
+    .background-footer {
+        width: 100%;
+    }
+   
+}
 
+/* desktop */
+
+@media (min-width: 1024px) {
+
+
+    .background-footer {
+        width: 100%;
+        padding-top: 40px;
     }
 
     .background-menu {
@@ -69,19 +80,14 @@
         margin-left: 0;
         padding-bottom: 0;
         padding-left: 88%;
-        margin-bottom: -40px;
-
+        margin-bottom: -38px;
+        font-size: 18px;
     }
 
     .text-align {
         white-space: nowrap;
         padding-right: 15px;
+        font-size: 13px;
     }
-
-    .padding-text-footer {
-        padding-right: 65px;
-    }
-
-
 
 }

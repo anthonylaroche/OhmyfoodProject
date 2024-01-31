@@ -77,18 +77,20 @@
     padding-bottom: 20%;
 }
 
-.heart-color {
-    color: transparent;
-}
-
-.heart-color:hover {
-    color: $violet;
-}
-
 /* desktop */
 @media (min-width: 768px) {
 
-    /* restaurants */
+    .encadre-nouveau {
+        left: 84%;
+    }
+   
+
+}
+
+@media (min-width: 1024px) {
+    .encadre-nouveau {
+        left: 72%;
+    }
 
     .row-direction {
         flex-direction: row;
@@ -111,10 +113,6 @@
         margin-right: 3%;
     }
 
-    .encadre-nouveau {
-        left: 80%;
-
-    }
 
     .background-restaurants {
         padding-bottom: 0;

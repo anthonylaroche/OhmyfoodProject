@@ -44,19 +44,24 @@
 
     /* réservez le menu */
 
-    .margin-reservez-title {
-        margin-left: 20%;
-        margin-right: 20%;
-        font-size: 40px;
-        font-weight: 700;
+    
     }
 
-    .margin-reservez-subtitle {
-        margin-left: 6%;
-        margin-right: 6%;
-        margin-top: 2%;
-        margin-bottom: 2%;
-        font-size: 18px;
-        font-weight: 300;
-    }
+    @media (min-width: 1024px) {
+    
+        .margin-reservez-title {
+            margin-left: 20%;
+            margin-right: 20%;
+            font-size: 40px;
+            font-weight: 700;
+        }
+    
+        .margin-reservez-subtitle {
+            margin-left: 6%;
+            margin-right: 6%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            font-size: 18px;
+            font-weight: 300;
+        }
     }
